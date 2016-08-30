@@ -52,7 +52,16 @@
 	The advantage of for-each loop is that it eliminates the possibility of bugs and makes the code more readable.
 	It is faster than the normal for loop
 
-3B):
+3B): The short circuit logical operator desn't care to evaluate the right side operand if the outcome of the expression can be determined by the left side alone. This is particularly useful in a situation where we are required to check the right side only if the left side holds good. For example (the most cliched example):
+
+Consider division. We can't divide a number by the denominator if it is zero. To check this out, before we check for another condition, say if the quotient is greater than 5, we can simply do this in one line:
+if(denom!=0&&num/denom>5)
+{
+//code
+}
+This saves us from unwanted errors if the denom were zero. In that case it would just break the if without evauluating the right side (num/denom)>10.
+
+Links: http://stackoverflow.com/questions/8759868/java-logical-operator-short-circuiting
 
 
 4A):
